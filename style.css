@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.drop-down-button {
+   width: 40px;
+  height: auto;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.drop-down-button:hover {
+    cursor: pointer;
+}
+
+.line {
+    display: block;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
