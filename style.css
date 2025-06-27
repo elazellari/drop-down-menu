@@ -83,3 +83,24 @@ a {
     font-size: 30px;
     font-weight: bold;
 }
+
+
+.img.green {
+    background-color: green;
+}
+
+.img.yellow {
+    background-color: yellow;
+}
+
+.img.pink {
+    background-color: pink;
+}
+
+.img.orange {
+    background-color: orange;
+}
+
+.img.blue {
+    background-color: blue;
+}
