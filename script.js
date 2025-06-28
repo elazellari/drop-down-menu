@@ -11,24 +11,26 @@ toggle.addEventListener("click", () => {
 
 //image carousel functions
 
-let img = document.querySelectorAll(".img");
+let img = Array.from(document.querySelectorAll(".img"));
 let mainImg = document.querySelector(".img.main-img");
+let currentIndex = img.indexOf(mainImg);
 let previous = mainImg;
-
-img.forEach((element) => {
-  element.addEventListener("click", () => {
-    previous.classList = element.classList;
-    element.classList = "img main-img";
-    previous = element;
-  });
-});
-
 let left = document.querySelector(".left");
+let right = document.querySelector(".right");
+
 left.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + img.length) % img.length;
+  previous.classList = img[currentIndex].classList;
+  img[currentIndex].classList = "img main-img";
+  previous = img[currentIndex];
   console.log("left button clicked");
 });
 
-let right = document.querySelector(".right");
 right.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1 + img.length) % img.length;
+  previous.classList = img[currentIndex].classList;
+  img[currentIndex].classList = "img main-img";
+  previous = img[currentIndex];
+  console.log("left button clicked");
   console.log("right side clicked");
 });
